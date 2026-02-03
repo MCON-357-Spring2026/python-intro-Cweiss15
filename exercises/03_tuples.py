@@ -10,3 +10,17 @@ Demonstrate tuple immutability
 Create a tuple named 'immutable_tuple' with three integer values.
 Attempt to change the first element of the tuple to a different value and handle the exception that arises
 """
+coordinates = ("latitude", "longitude", "altitude")
+lat, lon, alt = coordinates
+print(lat, lon, alt)
+mixed = ("yellow", 5, 1.1)
+print(mixed)
+person_info = ("Abby", "12", "5.3")
+name, age, height = person_info
+print(name, age, height)
+immutable_tuple = (1, 2, 3)
+try:
+    immutable_tuple[0] = 0
+except TypeError as e:
+    print(e)
+
